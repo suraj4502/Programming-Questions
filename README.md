@@ -6,3 +6,5 @@ The questions cover the following topics :
 - Problem on Number System
 - Problem on Sorting
 - Problem on Strings
+
+**NOTE: All questions have been solved using Python programming language.**
