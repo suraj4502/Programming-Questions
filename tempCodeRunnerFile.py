@@ -1,15 +1,23 @@
-def reverse_array(arr):
-#     # Initialize start and end pointers
-#     start = 0
-#     end = len(arr) - 1
+def number_of_occurance(array):
+    count = {}
+
+    for num in array:
+        if num in count:
+            count[num] += 1
+        else:
+            count[num] =1
+        
+        
+    sorted_dict = dict(sorted(count.items(), key=lambda x: -x[1]))
+
+    for key,value in sorted_dict.items():
+        return sorted_dict
     
-#     # Swap elements from start to end until they meet in the middle
-#     while start < end:
-#         # Swap elements at start and end indices
-#         arr[start], arr[end] = arr[end], arr[start]
-#         # Move start pointer forward
-#         start += 1
-#         # Move end pointer backward
-#         end -= 1
     
-#     return arr
+
+
+if __name__ == '__main__':
+    arr = list(map(int,input().split()))
+    result = number_of_occurance(arr)
+    for key,value in result.items():
+        print(key,value)
